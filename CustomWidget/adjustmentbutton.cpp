@@ -15,17 +15,17 @@ AdjustmentButton::AdjustmentButton(QWidget *parent)
     ui->label->setAlignment(Qt::AlignCenter);
 
 
-    connect(timer_high, &QTimer::timeout, this, &AdjustmentButton::doIncrement);
+    connect(timer_high,&QTimer::timeout, this, &AdjustmentButton::doIncrement);
     connect(timer_low, &QTimer::timeout, this, &AdjustmentButton::doDecrement);
-    connect(timer_high, &QTimer::timeout, this, &AdjustmentButton::doMoreIncrement);
+    connect(timer_high,&QTimer::timeout, this, &AdjustmentButton::doMoreIncrement);
     connect(timer_low, &QTimer::timeout, this, &AdjustmentButton::doMoreDecrement);
 
 
     connect(ui->pushButton_high, &QPushButton::pressed, this, &AdjustmentButton::buttonPressed_high);
-    connect(ui->pushButton_high,  &QPushButton::released, this, &AdjustmentButton::buttonReleased_high);
+    connect(ui->pushButton_high, &QPushButton::released, this, &AdjustmentButton::buttonReleased_high);
 
     connect(ui->pushButton_moreHigh, &QPushButton::pressed, this, &AdjustmentButton::buttonPressed_moreHigh);
-    connect(ui->pushButton_moreHigh,  &QPushButton::released, this, &AdjustmentButton::buttonReleased_moreHigh);
+    connect(ui->pushButton_moreHigh, &QPushButton::released, this, &AdjustmentButton::buttonReleased_moreHigh);
 
     connect(ui->pushButton_low, &QPushButton::pressed, this, &AdjustmentButton::buttonPressed_low);
     connect(ui->pushButton_low, &QPushButton::released, this, &AdjustmentButton::buttonReleased_low);
